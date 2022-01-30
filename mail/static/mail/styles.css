@@ -1,0 +1,27 @@
+textarea {
+    min-height: 400px;
+}
+
+td{
+    padding: 2px;
+}
+
+tr {
+    border: 2px black solid;
+}
+
+.email_{
+    font-weight: bold;
+}
+
+.subject_{
+    padding-left:25px;
+}
+.timestamp_ {
+    width:100%;
+    text-align: right;
+}
+
+btn{
+    margin:2px;
+}

@@ -1,0 +1,45 @@
+{% extends "mail/layout.html" %}
+
+{% block body %}
+
+
+<div class="row">
+
+    <div class="col-sm-6" style="height:780px;background-color:#7cd8f9;text-align:center;padding-top:20px">
+        <i><h2>Best way to connect with people anywhere, anytime</h2></i>
+        <i><h5>Free and fast accessibility.</h5></i>
+        <i><h1 style="font-size:280px;color:blue;font-family:Brush Script MT">S</h1></i>
+    </div>
+
+    <div class="col-sm-6">
+
+        <h2 style="padding-top:20px">Login</h2>
+
+        {% if message %}
+            <div>{{ message }}</div>
+        {% endif %}
+        Don't have an account? <a href="{% url 'register' %}">Register here.</a>
+
+
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input autofocus class="form-control" type="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <input class="btn btn-primary" type="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+<footer style="position:fixed;bottom:0;width:100%;">
+    <div style="background-color: #D6d9da; margin-bottom: 0px; height: 40px;">
+        <p style="color:black; text-align: center;padding-top: 10px;">@copyrights <b>Smail</b></p>
+    </div>
+</footer>
+
+<!--    Don't have an account? <a href="{% url 'register' %}">Register here.</a>-->
+
+{% endblock %}
